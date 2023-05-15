@@ -7,7 +7,8 @@ RUN apt-get update && \
     ln -f -s /usr/share/zoneinfo/Europe/Warsaw /etc/localtime && \
     echo "Europe/Warsaw" > /etc/timezone && \
     rm -rf /var/lib/apt/lists/* && \
-    pip3 install --no-cache-dir selenium pyvirtualdisplay paho-mqtt
+    pip3 install --no-cache-dir selenium pyvirtualdisplay paho-mqtt && \
+    pip install webdriver-manager
 
 ADD main.py docker_entry.sh /app/
 
