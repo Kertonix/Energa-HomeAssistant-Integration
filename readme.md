@@ -121,7 +121,7 @@ docker run -d --name energa-scrapper \
 -e MQTT_USERNAME=<optional mqtt username> \
 -e MQTT_PASSWORD=<optional mqtt password> \
 -e MQTT_PORT=<optional mqtt server port> \
-energa-scrapper
+kertonix/energa-scrapper
 ```
 ## Automatyczne uruchamianie - Docker Compose
 ```
@@ -129,7 +129,7 @@ version: "3"
 
 services:
   energa-scrapper:
-    container_name: energa-scrapper
+    container_name: kertonix/energa-scrapper
     image: energa-scrapper:1.0
     network_mode: "host"
     environment:
